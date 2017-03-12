@@ -1,0 +1,23 @@
+{
+  "name": "clubhouse-project-analytics",
+  "version": "1.0.0",
+  "homepage": "https://github.com/clubhouse/project-analytics",
+  "repository": "https://github.com/clubhouse/project-analytics.git",
+  "description": "Visualizing Clubhouse Project data using Google Charts.",
+  "keywords": [
+    "clubhouse",
+    "clubhouse.io",
+    "project management",
+    "issue tracking",
+    "analytics",
+    "reporting",
+    "metrics",
+    "google charts"
+  ],
+  "dependencies": {
+    "request": "*",
+    "lodash": "*",
+    "moment": "*"
+  },
+  "license": "MIT"
+}
