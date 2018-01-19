@@ -14,10 +14,16 @@
     "metrics",
     "google charts"
   ],
+  "scripts": {
+    "list": "node fetch.js",
+    "build-all": "node fetch.js all && open index.html",
+    "build": "node fetch.js -- && open index.html"
+  },
   "dependencies": {
-    "request": "*",
+    "dotenv": "^4.0.0",
     "lodash": "*",
-    "moment": "*"
+    "moment": "*",
+    "request": "*"
   },
   "license": "MIT"
 }

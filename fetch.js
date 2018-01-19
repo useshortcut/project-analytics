@@ -1,3 +1,4 @@
+require('dotenv').config()
 var fs = require('fs');
 
 var _ = require('lodash');
@@ -6,7 +7,8 @@ var request = require('request');
 
 var MILLISECONDS_IN_A_DAY = 1000 * 60 * 60 * 24;
 var DATE_FORMAT = 'YYYY-MM-DD';
-var PROJECT_FILE = 'data/projects.js';
+var PROJECT_DIR = 'data';
+var PROJECT_FILE = PROJECT_DIR + '/projects.js';
 
 var TOKEN = process.env.CLUBHOUSE_API_TOKEN;
 
@@ -196,7 +198,7 @@ function compileChartData(stories, project) {
   data += calculateCycleTimeChartData(stories, dateRange);
   data += calculateEstimateChartData(stories);
 
-  fs.writeFileSync('data/project-' + project.id + '.js', data);
+  fs.writeFileSync(PROJECT_DIR + '/project-' + project.id + '.js', data);
 }
 
 function saveProjectsToFile(projects) {
@@ -282,7 +284,9 @@ function init() {
   if (!TOKEN) {
     return displayNoTokenMessage();
   }
-
+  if (!fs.existsSync('./' + PROJECT_DIR)) {
+    fs.mkdirSync('./' + PROJECT_DIR);
+  }
   compileProjectData();
 }
 

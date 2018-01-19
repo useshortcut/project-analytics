@@ -15,23 +15,21 @@ cd project-analytics
 
 # Install node dependencies. You only need to do this once.
 npm install
-
-# Add your Clubhouse API token as an environment variable.
-# (Go to Clubhouse > Settings > Your Account > API Tokens to create one.)
-CLUBHOUSE_API_TOKEN="MY TOKEN"
 ```
+
+Go to Clubhouse > Settings > Your Account > API Tokens and generate a token
+Duplicate `.env.example`, rename to `.env`, and paste your token into the `.env` file
 
 ### Usage
 
 ```shell
-# Fetch and compile your data by project. You can use a partial project name,
-# e.g. "AP" will match projects starting with both "API" and "App". Leaving off
-# the project-name will list the projects you have access to.
-node fetch.js <project-name>
+# List all of the active (non-archived) projects you have access to
+npm run list
 
-# Or, just fetch and compile data for all active (non-archived) projects:
-node fetch.js all
+# Fetch and compile your data by project. You can use a partial project name.
+# e.g. "AP" will match projects starting with both "API" and "App".
+npm run build <project-name>
 
-# Finally, open the HTML file in your browser and select a project:
-open index.html
+# Fetch and compile data for all active (non-archived) projects
+npm run build-all
 ```
