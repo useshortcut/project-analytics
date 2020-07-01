@@ -4,7 +4,7 @@
 
 A historical library that fetches data from your Clubhouse organization and displays various metrics using Google Charts. Demonstrates how to combine [the Clubhouse API](https://clubhouse.io/api) and [Google Charts](https://developers.google.com/chart/interactive/docs/gallery) to create an analytics dashboard that measures any arbitrary aspect of your Clubhouse data.
 
-* Note that this repo is unmaintained, unsupported, and for historical reference only.*
+**:warning: Note that this repo is unmaintained, unsupported, and for historical reference only.**
 
 ### Installation
 
